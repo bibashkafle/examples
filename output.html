@@ -1,0 +1,394 @@
+
+
+
+<link href="/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+<script src="/Scripts/jquery-2.1.1.min.js"></script>
+<script src="/Scripts/globalize/globalize.js"></script>
+
+
+<script src="/Scripts/jscanvas/canvasjs.min.js"></script>
+<div class="row">
+        <div class="col-md-4">
+            <div class="chatbaloon  color_gray baloon_arrow" style="width:100%">
+                <div id="DivTankLineGraph_14" style="width:100%;height:350px;">
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="chatbaloon  color_gray baloon_arrow" style="width:100%">
+                <div id="DivTankLineGraph_15" style="width:100%;height:350px;">
+
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="chatbaloon  color_gray baloon_arrow" style="width:100%">
+                <div id="DivTankLineGraph_16" style="width:100%;height:350px;">
+
+                </div>
+            </div>
+        </div>
+</div>
+<script type="text/javascript">
+        
+        var TankLineGraph_14 = new CanvasJS.Chart("DivTankLineGraph_14", {
+            zoomEnabled: true,
+            animationEnabled: true,
+            exportEnabled: true,
+            exportFileName: "Tank 1",
+            title: {
+                text: "",
+                fontSize: 24
+            },
+            axisX: {
+                title: "Date",
+                valueFormatString: "MM/DD/YY"
+            },
+            axisY: {
+                title: "Gallons",
+                includeZero: false
+            },
+            toolTip: {
+                shared: false
+            },
+
+            legend: {
+                cursor: "pointer",
+                verticalAlign: "top",
+                fontSize: 22,
+                fontColor: "dimGrey",
+                itemclick: toggleDataSeriesTankLineGraphGraph_14
+            },
+            data:[]
+
+        });
+
+        function toggleDataSeriesTankLineGraphGraph_14 (e)
+        {
+            if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+                e.dataSeries.visible = false;
+            }
+            else {
+                    e.dataSeries.visible = true;
+            }
+            (TankLineGraph_14).render();
+         }
+
+    function displayTankLineGraph_14() {
+        var data = [{"TankId":0,"Value":6670,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"10/31/2018 12:00:00 AM"},{"TankId":0,"Value":4811,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"11/1/2018 12:00:00 AM"},{"TankId":0,"Value":2366,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"11/2/2018 12:00:00 AM"},{"TankId":0,"Value":6624,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"11/3/2018 12:00:00 AM"},{"TankId":0,"Value":5790,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"11/5/2018 12:00:00 AM"},{"TankId":0,"Value":3921,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"11/6/2018 12:00:00 AM"},{"TankId":0,"Value":3921,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"11/7/2018 12:00:00 AM"},{"TankId":0,"Value":1998,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"11/15/2018 12:00:00 AM"},{"TankId":0,"Value":6071,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"11/16/2018 12:00:00 AM"},{"TankId":0,"Value":3059,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"11/19/2018 12:00:00 AM"},{"TankId":0,"Value":7913,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"11/20/2018 12:00:00 AM"},{"TankId":0,"Value":5500,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"11/21/2018 12:00:00 AM"},{"TankId":0,"Value":4219,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"11/24/2018 12:00:00 AM"},{"TankId":0,"Value":4219,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"11/25/2018 12:00:00 AM"},{"TankId":0,"Value":3385,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"11/26/2018 12:00:00 AM"},{"TankId":0,"Value":1524,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"11/27/2018 12:00:00 AM"},{"TankId":0,"Value":8128,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"11/28/2018 12:00:00 AM"},{"TankId":0,"Value":5740,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"11/29/2018 12:00:00 AM"},{"TankId":0,"Value":3973,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"11/30/2018 12:00:00 AM"},{"TankId":0,"Value":3973,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"12/1/2018 12:00:00 AM"},{"TankId":0,"Value":7236,"OrderPump":2000,"MinUsable":600,"MaxUsable":18000,"TankVol":12000,"Date":"12/3/2018 12:00:00 AM"},{"TankId":0,"Value":5431,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"12/4/2018 12:00:00 AM"},{"TankId":0,"Value":3785,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"12/5/2018 12:00:00 AM"},{"TankId":0,"Value":7171,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"12/7/2018 12:00:00 AM"},{"TankId":0,"Value":4384,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"12/8/2018 12:00:00 AM"},{"TankId":0,"Value":4210,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"12/9/2018 12:00:00 AM"},{"TankId":0,"Value":4197,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"12/10/2018 12:00:00 AM"},{"TankId":0,"Value":7571,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"12/11/2018 12:00:00 AM"},{"TankId":0,"Value":5069,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"12/12/2018 12:00:00 AM"},{"TankId":0,"Value":3089,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"12/13/2018 12:00:00 AM"},{"TankId":0,"Value":1471,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"12/14/2018 12:00:00 AM"}];
+
+                var dataPointss = [];
+                var dataPointOrderPump = [];
+                var dataPointMinuse = [];
+                var dataPointMaxUse = [];
+                for (var i = 0; i <= data.length - 1; i++) {
+                    var Value = data[i].Value;
+                    var OrderPump = data[i].OrderPump
+                    var MinUsable = data[i].MinUsable
+                    var MaxUsable = data[i].MaxUsable
+                    var _Date = data[i].Date;
+                var time = new Date(Date.parse(_Date));
+
+                dataPointss.push({ x: time, y: Value });
+                dataPointOrderPump.push({ x: time, y: OrderPump });
+                dataPointMinuse.push({ x: time, y: MinUsable });
+                dataPointMaxUse.push({ x: time, y: MaxUsable });
+            }
+
+            if (data == null || data.length <= 0){
+                (TankLineGraph_14).render();
+                return;
+            }
+
+            data[0].type = "line";
+            data[0].xValueType = "date";
+            data[0].showInLegend = true;
+            data[0].name = 'Tank 1';
+            data[0].dataPoints = dataPointss;
+            (TankLineGraph_14).options.data[0] = data[0];
+            (TankLineGraph_14).options.data[0].legendText =  'Tank 1';
+
+            data[1].type = "line";
+            data[1].xValueType = "date";
+            data[1].color = "red";
+            data[1].showInLegend = false;
+            data[1].dataPoints = dataPointOrderPump;
+            (TankLineGraph_14).options.data[1] = data[1];
+
+            data[2].type = "line";
+            data[2].xValueType = "date";
+            data[2].color = "green";
+            data[2].showInLegend = false;
+            data[2].dataPoints = dataPointMinuse;
+            (TankLineGraph_14).options.data[2] = data[2];
+
+            data[3].type = "line";
+            data[3].xValueType = "date";
+            data[3].color = "green";
+            data[3].showInLegend = false;
+            data[3].dataPoints = dataPointMaxUse;
+            (TankLineGraph_14).options.data[3] = data[3];
+
+            (TankLineGraph_14).render();
+    }
+    displayTankLineGraph_14();
+        
+        
+        var TankLineGraph_15 = new CanvasJS.Chart("DivTankLineGraph_15", {
+            zoomEnabled: true,
+            animationEnabled: true,
+            exportEnabled: true,
+            exportFileName: "Tank 2",
+            title: {
+                text: "",
+                fontSize: 24
+            },
+            axisX: {
+                title: "Date",
+                valueFormatString: "MM/DD/YY"
+            },
+            axisY: {
+                title: "Gallons",
+                includeZero: false
+            },
+            toolTip: {
+                shared: false
+            },
+
+            legend: {
+                cursor: "pointer",
+                verticalAlign: "top",
+                fontSize: 22,
+                fontColor: "dimGrey",
+                itemclick: toggleDataSeriesTankLineGraphGraph_15
+            },
+            data:[]
+
+        });
+
+        function toggleDataSeriesTankLineGraphGraph_15 (e)
+        {
+            if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+                e.dataSeries.visible = false;
+            }
+            else {
+                    e.dataSeries.visible = true;
+            }
+            (TankLineGraph_15).render();
+         }
+
+    function displayTankLineGraph_15() {
+        var data = [{"TankId":0,"Value":2199,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"10/31/2018 12:00:00 AM"},{"TankId":0,"Value":1557,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"11/1/2018 12:00:00 AM"},{"TankId":0,"Value":1173,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"11/2/2018 12:00:00 AM"},{"TankId":0,"Value":2438,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"11/3/2018 12:00:00 AM"},{"TankId":0,"Value":2245,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"11/5/2018 12:00:00 AM"},{"TankId":0,"Value":1635,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"11/6/2018 12:00:00 AM"},{"TankId":0,"Value":1635,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"11/7/2018 12:00:00 AM"},{"TankId":0,"Value":2132,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"11/15/2018 12:00:00 AM"},{"TankId":0,"Value":3477,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"11/16/2018 12:00:00 AM"},{"TankId":0,"Value":2720,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"11/19/2018 12:00:00 AM"},{"TankId":0,"Value":3803,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"11/20/2018 12:00:00 AM"},{"TankId":0,"Value":3460,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"11/21/2018 12:00:00 AM"},{"TankId":0,"Value":3161,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"11/24/2018 12:00:00 AM"},{"TankId":0,"Value":3162,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"11/25/2018 12:00:00 AM"},{"TankId":0,"Value":2929,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"11/26/2018 12:00:00 AM"},{"TankId":0,"Value":2427,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"11/27/2018 12:00:00 AM"},{"TankId":0,"Value":2364,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"11/28/2018 12:00:00 AM"},{"TankId":0,"Value":1863,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"11/29/2018 12:00:00 AM"},{"TankId":0,"Value":1384,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"11/30/2018 12:00:00 AM"},{"TankId":0,"Value":1384,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"12/1/2018 12:00:00 AM"},{"TankId":0,"Value":2175,"OrderPump":2000,"MinUsable":600,"MaxUsable":18000,"TankVol":12000,"Date":"12/3/2018 12:00:00 AM"},{"TankId":0,"Value":1737,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"12/4/2018 12:00:00 AM"},{"TankId":0,"Value":1464,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"12/5/2018 12:00:00 AM"},{"TankId":0,"Value":1838,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"12/7/2018 12:00:00 AM"},{"TankId":0,"Value":1295,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"12/8/2018 12:00:00 AM"},{"TankId":0,"Value":1262,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"12/9/2018 12:00:00 AM"},{"TankId":0,"Value":1221,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"12/10/2018 12:00:00 AM"},{"TankId":0,"Value":2518,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"12/11/2018 12:00:00 AM"},{"TankId":0,"Value":1997,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"12/12/2018 12:00:00 AM"},{"TankId":0,"Value":1427,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"12/13/2018 12:00:00 AM"},{"TankId":0,"Value":952,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"12/14/2018 12:00:00 AM"}];
+
+                var dataPointss = [];
+                var dataPointOrderPump = [];
+                var dataPointMinuse = [];
+                var dataPointMaxUse = [];
+                for (var i = 0; i <= data.length - 1; i++) {
+                    var Value = data[i].Value;
+                    var OrderPump = data[i].OrderPump
+                    var MinUsable = data[i].MinUsable
+                    var MaxUsable = data[i].MaxUsable
+                    var _Date = data[i].Date;
+                var time = new Date(Date.parse(_Date));
+
+                dataPointss.push({ x: time, y: Value });
+                dataPointOrderPump.push({ x: time, y: OrderPump });
+                dataPointMinuse.push({ x: time, y: MinUsable });
+                dataPointMaxUse.push({ x: time, y: MaxUsable });
+            }
+
+            if (data == null || data.length <= 0){
+                (TankLineGraph_15).render();
+                return;
+            }
+
+            data[0].type = "line";
+            data[0].xValueType = "date";
+            data[0].showInLegend = true;
+            data[0].name = 'Tank 2';
+            data[0].dataPoints = dataPointss;
+            (TankLineGraph_15).options.data[0] = data[0];
+            (TankLineGraph_15).options.data[0].legendText =  'Tank 2';
+
+            data[1].type = "line";
+            data[1].xValueType = "date";
+            data[1].color = "red";
+            data[1].showInLegend = false;
+            data[1].dataPoints = dataPointOrderPump;
+            (TankLineGraph_15).options.data[1] = data[1];
+
+            data[2].type = "line";
+            data[2].xValueType = "date";
+            data[2].color = "green";
+            data[2].showInLegend = false;
+            data[2].dataPoints = dataPointMinuse;
+            (TankLineGraph_15).options.data[2] = data[2];
+
+            data[3].type = "line";
+            data[3].xValueType = "date";
+            data[3].color = "green";
+            data[3].showInLegend = false;
+            data[3].dataPoints = dataPointMaxUse;
+            (TankLineGraph_15).options.data[3] = data[3];
+
+            (TankLineGraph_15).render();
+    }
+    displayTankLineGraph_15();
+        
+        
+        var TankLineGraph_16 = new CanvasJS.Chart("DivTankLineGraph_16", {
+            zoomEnabled: true,
+            animationEnabled: true,
+            exportEnabled: true,
+            exportFileName: "Tank 3",
+            title: {
+                text: "",
+                fontSize: 24
+            },
+            axisX: {
+                title: "Date",
+                valueFormatString: "MM/DD/YY"
+            },
+            axisY: {
+                title: "Gallons",
+                includeZero: false
+            },
+            toolTip: {
+                shared: false
+            },
+
+            legend: {
+                cursor: "pointer",
+                verticalAlign: "top",
+                fontSize: 22,
+                fontColor: "dimGrey",
+                itemclick: toggleDataSeriesTankLineGraphGraph_16
+            },
+            data:[]
+
+        });
+
+        function toggleDataSeriesTankLineGraphGraph_16 (e)
+        {
+            if (typeof (e.dataSeries.visible) === "undefined" || e.dataSeries.visible) {
+                e.dataSeries.visible = false;
+            }
+            else {
+                    e.dataSeries.visible = true;
+            }
+            (TankLineGraph_16).render();
+         }
+
+    function displayTankLineGraph_16() {
+        var data = [{"TankId":0,"Value":800,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"10/31/2018 12:00:00 AM"},{"TankId":0,"Value":749,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"11/1/2018 12:00:00 AM"},{"TankId":0,"Value":725,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"11/2/2018 12:00:00 AM"},{"TankId":0,"Value":1693,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"11/3/2018 12:00:00 AM"},{"TankId":0,"Value":1655,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"11/5/2018 12:00:00 AM"},{"TankId":0,"Value":1615,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"11/6/2018 12:00:00 AM"},{"TankId":0,"Value":1615,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"11/7/2018 12:00:00 AM"},{"TankId":0,"Value":1188,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"11/15/2018 12:00:00 AM"},{"TankId":0,"Value":1111,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"11/16/2018 12:00:00 AM"},{"TankId":0,"Value":1019,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"11/19/2018 12:00:00 AM"},{"TankId":0,"Value":974,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"11/20/2018 12:00:00 AM"},{"TankId":0,"Value":910,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"11/21/2018 12:00:00 AM"},{"TankId":0,"Value":851,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"11/24/2018 12:00:00 AM"},{"TankId":0,"Value":851,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"11/25/2018 12:00:00 AM"},{"TankId":0,"Value":815,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"11/26/2018 12:00:00 AM"},{"TankId":0,"Value":696,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"11/27/2018 12:00:00 AM"},{"TankId":0,"Value":696,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"11/28/2018 12:00:00 AM"},{"TankId":0,"Value":576,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"11/29/2018 12:00:00 AM"},{"TankId":0,"Value":476,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"11/30/2018 12:00:00 AM"},{"TankId":0,"Value":476,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"12/1/2018 12:00:00 AM"},{"TankId":0,"Value":1443,"OrderPump":2000,"MinUsable":600,"MaxUsable":18000,"TankVol":12000,"Date":"12/3/2018 12:00:00 AM"},{"TankId":0,"Value":1366,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"12/4/2018 12:00:00 AM"},{"TankId":0,"Value":1283,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"12/5/2018 12:00:00 AM"},{"TankId":0,"Value":1203,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"12/7/2018 12:00:00 AM"},{"TankId":0,"Value":1145,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"12/8/2018 12:00:00 AM"},{"TankId":0,"Value":1145,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"12/9/2018 12:00:00 AM"},{"TankId":0,"Value":1145,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"12/10/2018 12:00:00 AM"},{"TankId":0,"Value":1125,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"12/11/2018 12:00:00 AM"},{"TankId":0,"Value":1073,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"12/12/2018 12:00:00 AM"},{"TankId":0,"Value":1047,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"12/13/2018 12:00:00 AM"},{"TankId":0,"Value":1027,"OrderPump":0,"MinUsable":0,"MaxUsable":0,"TankVol":0,"Date":"12/14/2018 12:00:00 AM"}];
+
+                var dataPointss = [];
+                var dataPointOrderPump = [];
+                var dataPointMinuse = [];
+                var dataPointMaxUse = [];
+                for (var i = 0; i <= data.length - 1; i++) {
+                    var Value = data[i].Value;
+                    var OrderPump = data[i].OrderPump
+                    var MinUsable = data[i].MinUsable
+                    var MaxUsable = data[i].MaxUsable
+                    var _Date = data[i].Date;
+                var time = new Date(Date.parse(_Date));
+
+                dataPointss.push({ x: time, y: Value });
+                dataPointOrderPump.push({ x: time, y: OrderPump });
+                dataPointMinuse.push({ x: time, y: MinUsable });
+                dataPointMaxUse.push({ x: time, y: MaxUsable });
+            }
+
+            if (data == null || data.length <= 0){
+                (TankLineGraph_16).render();
+                return;
+            }
+
+            data[0].type = "line";
+            data[0].xValueType = "date";
+            data[0].showInLegend = true;
+            data[0].name = 'Tank 3';
+            data[0].dataPoints = dataPointss;
+            (TankLineGraph_16).options.data[0] = data[0];
+            (TankLineGraph_16).options.data[0].legendText =  'Tank 3';
+
+            data[1].type = "line";
+            data[1].xValueType = "date";
+            data[1].color = "red";
+            data[1].showInLegend = false;
+            data[1].dataPoints = dataPointOrderPump;
+            (TankLineGraph_16).options.data[1] = data[1];
+
+            data[2].type = "line";
+            data[2].xValueType = "date";
+            data[2].color = "green";
+            data[2].showInLegend = false;
+            data[2].dataPoints = dataPointMinuse;
+            (TankLineGraph_16).options.data[2] = data[2];
+
+            data[3].type = "line";
+            data[3].xValueType = "date";
+            data[3].color = "green";
+            data[3].showInLegend = false;
+            data[3].dataPoints = dataPointMaxUse;
+            (TankLineGraph_16).options.data[3] = data[3];
+
+            (TankLineGraph_16).render();
+    }
+    displayTankLineGraph_16();
+        
+    var fuelinventoryInputs = new Array();
+        
+                var fuelInventoryInput = {};
+                fuelInventoryInput.TankId = 14;
+                var canvas = $("#DivTankLineGraph_14 .canvasjs-chart-canvas").get(0);
+                if (canvas != undefined || canvas != null) {
+                    var dataURL = canvas.toDataURL('image/png');
+                    fuelInventoryInput.GraphImage = dataURL;
+                    fuelinventoryInputs.push(fuelInventoryInput);
+                }
+        
+        
+                var fuelInventoryInput = {};
+                fuelInventoryInput.TankId = 15;
+                var canvas = $("#DivTankLineGraph_15 .canvasjs-chart-canvas").get(0);
+                if (canvas != undefined || canvas != null) {
+                    var dataURL = canvas.toDataURL('image/png');
+                    fuelInventoryInput.GraphImage = dataURL;
+                    fuelinventoryInputs.push(fuelInventoryInput);
+                }
+        
+        
+                var fuelInventoryInput = {};
+                fuelInventoryInput.TankId = 16;
+                var canvas = $("#DivTankLineGraph_16 .canvasjs-chart-canvas").get(0);
+                if (canvas != undefined || canvas != null) {
+                    var dataURL = canvas.toDataURL('image/png');
+                    fuelInventoryInput.GraphImage = dataURL;
+                    fuelinventoryInputs.push(fuelInventoryInput);
+                }
+        
+             
+          $.ajax({
+                    type: "POST",
+                    url: '/FuelInventory/SaveGraphImage',
+                    data: JSON.stringify(fuelinventoryInputs),
+                    contentType: "application/json; charset=utf-8",
+                    dataType: "json",
+                    success: function (r) {
+                    },
+                    error: function (e) {                    
+                    }
+        });
+        
+
+
+</script>
+<style type="text/css">
+    .canvasjs-chart-credit {
+        display: none;
+    }
+</style>
